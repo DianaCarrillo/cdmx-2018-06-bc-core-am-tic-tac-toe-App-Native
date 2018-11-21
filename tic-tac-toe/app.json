@@ -2,7 +2,7 @@
   "expo": {
     "name": "tic-tac-toe",
     "description": "Basic Tic-tac-toe as a project to understand React Native :) ",
-    "slug": "tic-tac-toe",
+    "slug": "tic-tac-toe-sashimi",
     "privacy": "public",
     "sdkVersion": "31.0.0",
     "platforms": [
