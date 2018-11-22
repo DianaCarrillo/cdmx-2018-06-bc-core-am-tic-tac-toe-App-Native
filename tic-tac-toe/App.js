@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet, View, TouchableOpacity, Alert, Button, Text } from 'react-native';
 import { MaterialCommunityIcons as Icon } from 'react-native-vector-icons';
-// import {Fonts} from './assets/fonts'
+import { Font } from 'expo'
 export default class App extends React.Component {
   constructor(props){
     super(props);
@@ -15,6 +15,9 @@ export default class App extends React.Component {
 
   componentDidMount(){
     this.initializeGame();
+    Font.loadAsync({
+      'comfortaa-bold' : require('./assets/fonts/Comfortaa-Bold.ttf')
+    })
   }
 
   initializeGame=()=>{
@@ -114,7 +117,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
           <View>
-            <Text style = {styles.title} >Tic-tac-toe</Text>
+            <Text style = {{fontFamily:'comfortaa-bold', fontSize:50, }} >Tic-tac-toe</Text>
           </View>
 
         <View style={{flexDirection: "row"}} >
@@ -175,7 +178,7 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   tileX: {
-    color: "pink",
+    color: "#bc097d",
     fontSize:60,
     
   },
@@ -184,14 +187,8 @@ const styles = StyleSheet.create({
     fontSize:60,
    
   },
-  title: {
-   fontSize: 50,
-   margin: 10,
-  //  fontFamily : Fonts.Comfortaa-Regular.tff,
-  //  color: pink
-  },
   newGbtn: {
-    marginTop:10
+    paddingTop:50
   }
   // con borderWith podemos manejar la visibilidad de los bordes y el grueso
 });
